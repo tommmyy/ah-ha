@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 
-import useEventListener from './useEventListener';
+import useEventListener from '../useEventListener';
 
 /**
  * Attaches the listener to the `document`.

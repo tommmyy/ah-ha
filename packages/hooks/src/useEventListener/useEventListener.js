@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { isFunction } from 'ramda-extension';
 
-import useEventCallback from './useEventCallback';
+import useEventCallback from '../useEventCallback';
 
 /**
  * Attaches an event handler outside directly to specified DOM element

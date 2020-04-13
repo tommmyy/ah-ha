@@ -16,8 +16,6 @@ module.exports = {
 		'react-hooks/rules-of-hooks': 'error',
 		'react-hooks/exhaustive-deps': 'warn',
 		'react/jsx-pascal-case': ['error', { allowAllCaps: true }],
-		// for qraphql queries
-		'react/prop-types': ['error', { ignore: ['data'] }],
 		'import/no-extraneous-dependencies': [
 			'error',
 			{
