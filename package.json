@@ -1,0 +1,47 @@
+{
+	"private": true,
+	"engines": {
+		"node": ">=10.10.0"
+	},
+	"workspaces": {
+		"packages": [
+			"packages/*"
+		]
+	},
+	"devDependencies": {
+		"@babel/core": "^7.7.5",
+		"babel-core": "^7.0.0-bridge",
+		"babel-eslint": "^10.0.3",
+		"babel-preset-react-union": "^0.15.1",
+		"concurrently": "^4.1.1",
+		"enzyme": "^3.9.0",
+		"enzyme-adapter-react-16": "^1.10.0",
+		"enzyme-to-json": "^3.3.5",
+		"eslint": "^5.12.0",
+		"eslint-config-react-union": "^0.15.0",
+		"eslint-plugin-babel": "^5.2.0",
+		"eslint-plugin-import": "^2.14.0",
+		"eslint-plugin-react": "^7.12.3",
+		"eslint-plugin-react-hooks": "^2.3.0",
+		"fs-extra": "^7.0.1",
+		"glob": "^7.1.2",
+		"husky": "^1.3.1",
+		"jest": "^24.9.0",
+		"lint-staged": "^8.0.3",
+		"npm-package-json-lint": "^3.4.1",
+		"npm-package-json-lint-config-default": "^2.0.0",
+		"prettier": "^1.19.1",
+		"ramda": "^0.27.0",
+		"ramda-extension": "^0.10.0",
+		"rimraf": "^2.6.3"
+	},
+	"scripts": {
+		"test": "jest",
+		"lint": "yarn lint:pkg && yarn lint:js",
+		"lint:pkg": "npmPkgJsonLint .",
+		"lint:js": "eslint --cache --ignore-path .gitignore --ext .js ./",
+		"precommit": "lint-staged",
+		"prepush": "yarn lint && yarn test",
+		"format": "prettier --ignore-path .gitignore --write '**/*.{js,json}' 'packages/*/!(node_modules)/**/*.js'"
+	}
+}
