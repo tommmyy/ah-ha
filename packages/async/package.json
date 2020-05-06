@@ -1,5 +1,5 @@
 {
-	"name": "@ah-ha/hooks",
+	"name": "@ah-ha/async",
 	"version": "0.0.1",
 	"engines": {
 		"node": ">=10.10.0"
@@ -8,7 +8,7 @@
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/tommmyy/ah-ha.git",
-		"directory": "packages/hooks"
+		"directory": "packages/async"
 	},
 	"bugs": {
 		"url": "https://github.com/tommmyy/ah-ha/issues"
